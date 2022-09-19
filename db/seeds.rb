@@ -43,24 +43,25 @@ url = "https://tmdb.lewagon.com/movie/top_rated?api_key=%3Ctmdb.lewagon.com%3E"
 movie_serialized = URI.open(url).read
 result = JSON.parse(movie_serialized)
 
-a = (10..15)
-    title = result["results"][a]["title"]
-    url_res = result["results"][a]["configuration"]
-    poster = result["results"][a]["poster_path"]
-    overview = result["results"][a]["overview"]
-    vote_average = result["results"][a]["vote_average"]
-    base = "https://image.tmdb.org/t/p/w500/"
-    image_link = base + poster
+# a = 15
+#     title = result["results"][a]["title"]
+#     url_res = result["results"][a]["configuration"]
+#     poster = result["results"][a]["poster_path"]
+#     overview = result["results"][a]["overview"]
+#     vote_average = result["results"][a]["vote_average"]
+#     base = "https://image.tmdb.org/t/p/w500/"
+#     image_link = base + poster
 # puts image_link
 # puts title
 # puts overview
 # puts vote_average
 
-  18.times do
+  18.times do |num|
+
     Movie.create(
-      title: title,
-      overview: overview,
-      poster_url: image_link,
-      rating: vote_average
+      title: result["results"][num]["title"],
+      overview: result["results"][num]["overview"],
+      poster_url: "https://image.tmdb.org/t/p/w500/#{result['results'][num]['poster_path']}",
+      rating: result["results"][num]["vote_average"]
     )
   end

@@ -5,15 +5,15 @@ url = "https://tmdb.lewagon.com/movie/top_rated?api_key=%3Ctmdb.lewagon.com%3E"
 movie_serialized = URI.open(url).read
 result = JSON.parse(movie_serialized)
 
-# sum = 1
-# 5.times do
-# result["results"].each do |x|
-#   puts  title =  x["title"],
-#   url_res = x["configuration"],
-#  poster = x["poster_path"],
-#   overview = x["overview"],
-#   rating = x["vote_average"]
-# end
+ sum = 1
+ 5.times do
+ result["results"].each do |x|
+  puts  title =  x["title"],
+   url_res = x["configuration"],
+ poster = x["poster_path"],
+   overview = x["overview"],
+   rating = x["vote_average"]
+ end
 #
 
 # title = result["results"][sum += 1]["title"]
@@ -27,4 +27,4 @@ result = JSON.parse(movie_serialized)
 # puts title
 # puts overview
 #puts title
-# end
+end
