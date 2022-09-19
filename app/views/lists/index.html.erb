@@ -1,7 +1,24 @@
-<h1>Lists#index</h1>
-<p>Find me in app/views/lists/index.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.nicepng.com/png/full/965-9651929_movies-banner.png);">
+  <div class="container">
+    <h1>Find <strong>the</strong> BEST <strong>MOVIES LISTS</strong>!</h1>
+    <p><span data-controller="typed-js"></span></p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+<hr>
+<div class="container">
+  <div class="cards">
+  <% @lists.each do |list| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.image %>)">
+      <%= link_to list.name.upcase, list_path(list),  class: "link" %>
+    </div>
+    <% end %>
+  </div>
 
-<p><% @lists.each do |list| %>
-<%= list.name %>
-<% end %>
-</p>
+
+<hr>
+
+
+
+
+</div>

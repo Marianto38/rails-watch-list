@@ -9,8 +9,31 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
-
   <body>
+
+    <%= render "shared/navbar" %>
+
+
     <%= yield %>
+
+
+ <div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github" style="color:#DA0037"></i></a>
+    <a href="#"><i class="fab fa-instagram" style="color:#DA0037"></i></a>
+    <a href="#"><i class="fab fa-facebook" style="color:#DA0037"></i></a>
+    <a href="#"><i class="fab fa-linkedin" style="color:#DA0037"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> by Maria Antonieta
+  </div>
+</div>
+
+
+
+
   </body>
+
+
+
 </html>
