@@ -43,6 +43,16 @@ url = "https://tmdb.lewagon.com/movie/top_rated?api_key=%3Ctmdb.lewagon.com%3E"
 movie_serialized = URI.open(url).read
 result = JSON.parse(movie_serialized)
 
+18.times do |num|
+
+  Movie.create(
+    title: result["results"][num]["title"],
+    overview: result["results"][num]["overview"],
+    poster_url: "https://image.tmdb.org/t/p/w500/#{result['results'][num]['poster_path']}",
+    rating: result["results"][num]["vote_average"]
+  )
+end
+
 # a = 15
 #     title = result["results"][a]["title"]
 #     url_res = result["results"][a]["configuration"]
@@ -55,13 +65,3 @@ result = JSON.parse(movie_serialized)
 # puts title
 # puts overview
 # puts vote_average
-
-  18.times do |num|
-
-    Movie.create(
-      title: result["results"][num]["title"],
-      overview: result["results"][num]["overview"],
-      poster_url: "https://image.tmdb.org/t/p/w500/#{result['results'][num]['poster_path']}",
-      rating: result["results"][num]["vote_average"]
-    )
-  end
