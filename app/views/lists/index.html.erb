@@ -17,8 +17,8 @@
 
 
 <hr>
+ <% @list.bookmarks.each do |bookmark| %>
+<%= render "form", bookmark: bookmark %>
 
-<%= render "form", bookmark: @bookmark %>
-
-
+<% end %>
 </div>
