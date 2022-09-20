@@ -8,4 +8,7 @@ class List < ApplicationRecord
   # Una lista debe tener un nombre único.
 
   validates :name, presence: true, uniqueness: true
+
+  # cloudinary
+  has_one_attached :photo
 end
