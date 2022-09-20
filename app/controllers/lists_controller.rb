@@ -16,7 +16,7 @@ class ListsController < ApplicationController
     @list = List.create(list_params)
     @list.save
       if @list.save
-        redirect_to lists_path
+        redirect_to root_path
       else
         render :new, status: :unprocessable_entity
       end
