@@ -43,7 +43,7 @@ url = "https://tmdb.lewagon.com/movie/top_rated?api_key=%3Ctmdb.lewagon.com%3E"
 movie_serialized = URI.open(url).read
 result = JSON.parse(movie_serialized)
 
-18.times do |num|
+40.times do |num|
 
   Movie.create(
     title: result["results"][num]["title"],
