@@ -20,6 +20,22 @@
   grid-gap: 16px;
 }
 
+.card-list {
+  margin-top: 70px;
+}
+
+.back-cards {
+  background-color: #DA0037;
+  border-radius: 8px;
+  border: white;
+  padding: 15px;
+  align-items: center;
+}
+
+.back-cards h1{
+text-align: center;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {

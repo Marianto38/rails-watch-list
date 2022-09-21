@@ -1,13 +1,12 @@
 <div class="container col-6">
-<hr>
-<hr>
-<hr>
-     <div class="container-new-list col-8">
+  <div class="row card-list">
+    <div class="row back-cards col-8">
       <h1>New List</h1>
-    <%= simple_form_for(@list) do |f| %>
-      <%= f.input :name %>
-      <%= f.input :photo, as: :file %>
-            <%= f.submit %>
-    <% end %>
+        <%= simple_form_for(@list) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :photo, as: :file %>
+        <%= f.submit %>
+      <% end %>
+    </div>
   </div>
 </div>

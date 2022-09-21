@@ -57,9 +57,9 @@ ul{
 
   .booking-card{
     position: relative;
-    width: 280px;
+    width: 300px;
     display: flex;
-    flex: 0 0 280px;
+    flex: 0 0 300px;
     flex-direction: column;
 
     margin: 20px;
@@ -90,7 +90,7 @@ ul{
     }
 
     .book-container {
-      height: 200px;
+      height: 100px;
       .content {
         position: relative;
         opacity: 0;
@@ -190,7 +190,7 @@ ul{
         .disclaimer {
           margin-top: 10px;
           font-size: 0.8em;
-          color: $grey;
+          color: white;
         }
       }
     }
