@@ -1,12 +1,1 @@
-<div class="container col-6">
-  <div class="row card-list">
-    <div class="row back-cards col-8">
-    <h1> New Bookmark </h1>
-
-        <%= simple_form_for [@list, @bookmark] do |f| %>
-          <%= f.input :comment %>
-          <%= f.association :movie, prompt: "Choose a movie" %>
-          <%= f.submit %>
-        <% end %>
-  </div>
-</div>
+ <%= render 'bookmarks/form' %>
