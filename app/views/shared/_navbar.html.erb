@@ -1,6 +1,6 @@
-  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg"
-   data-controller="navbar"
-   data-action="scroll@window->navbar#updateNavbar">
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg"
+    data-controller="navbar"
+    data-action="scroll@window->navbar#updateNavbar">
   <div class="container-fluid">
     <a class="navbar-brand" href="/lists"><i class="fa-sharp fa-solid fa-clapperboard"></i></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,19 +9,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/lists/new">NEW LIST</a>
+          <a class="nav-link active" aria-current="page" href="/lists/new"> NEW LIST </a>
         </li>
       <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get">
-  <div class="search-form-control form-group">
-    <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-    <button name="button" type="submit" class="btn btn-flat">
-      <i class="fas fa-search"></i> Search
-    </button>
-  </div>
-   </ul>
-</form>
+        <div class="search-form-control form-group">
+          <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+          <button name="button" type="submit" class="btn btn-flat">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </div>
+        </ul>
+      </form>
       <img class="avatar" alt="avatar" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
     </div>
   </div>
-
 </nav>
