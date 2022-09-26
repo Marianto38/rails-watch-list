@@ -1,7 +1,13 @@
 class ListsController < ApplicationController
 
   def index
-    @lists = List.all
+    @q = params[:q]
+    if @q
+      @lists = List.where("#{:name} LIKE ?", "%#{@q.upcase}%")
+    else
+      @lists = List.all
+
+     end
   end
 
   def new
